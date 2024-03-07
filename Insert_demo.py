@@ -6,7 +6,7 @@ with open('gene_list.csv', encoding = 'UTF-8') as file:
     csv_file = csv.reader(file)
     gene_list = [x for row in csv_file for x in row]
 
-gene_list.pop(0)
+gene_list = list(set(gene_list))
 
 gene_skip_list = SkipList()
 gene_skip_list.readCSV('gene_list.csv')
