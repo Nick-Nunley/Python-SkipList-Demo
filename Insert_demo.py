@@ -20,14 +20,14 @@ gene_skip_list.readCSV(gene_list_file)
 
 # Testing the insert speed of regular Python list
 start_time = time.time()
-gene_list.insert(2, element_to_insert)
+gene_list.insert(int(len(gene_list) / 2), element_to_insert)
 end_time = time.time()
 runtime = end_time - start_time
 print(f'Python list Runtime: {runtime:.8f} seconds')
 
 # Testing the search speed of linked list
 start_time = time.time()
-gene_linked_list.insertAtIndex(element_to_insert, 2)
+gene_linked_list.insertAtIndex(element_to_insert, int(gene_linked_list.sizeOfLL() / 2))
 end_time = time.time()
 runtime = end_time - start_time
 print(f'Linked list Runtime: {runtime:.8f} seconds')
